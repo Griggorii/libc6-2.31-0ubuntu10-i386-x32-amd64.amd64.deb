@@ -1,0 +1,112 @@
+Format: 1.8
+Date: Thu, 11 Jun 2020 11:53:48 +0200
+Source: glibc
+Binary: glibc-doc glibc-source libc-bin libc-dev-bin libc6 libc6-dbg libc6-dev libc6-dev-i386 libc6-dev-x32 libc6-i386 libc6-pic libc6-udeb libc6-x32 locales locales-all nscd
+Architecture: all amd64
+Version: 2.31-0ubuntu10
+Distribution: groovy
+Urgency: medium
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Changed-By: Matthias Klose <doko@ubuntu.com>
+Description:
+ glibc-doc  - GNU C Library: Documentation
+ glibc-source - GNU C Library: sources
+ libc-bin   - GNU C Library: Binaries
+ libc-dev-bin - GNU C Library: Development binaries
+ libc6      - GNU C Library: Shared libraries
+ libc6-dbg  - GNU C Library: detached debugging symbols
+ libc6-dev  - GNU C Library: Development Libraries and Header Files
+ libc6-dev-i386 - GNU C Library: 32-bit development libraries for AMD64
+ libc6-dev-x32 - GNU C Library: X32 ABI Development Libraries for AMD64
+ libc6-i386 - GNU C Library: 32-bit shared libraries for AMD64
+ libc6-pic  - GNU C Library: PIC archive library
+ libc6-udeb - GNU C Library: Shared libraries - udeb (udeb)
+ libc6-x32  - GNU C Library: X32 ABI Shared libraries for AMD64
+ locales    - GNU C Library: National Language (locale) data [support]
+ locales-all - GNU C Library: Precompiled locale data
+ nscd       - GNU C Library: Name Service Cache Daemon
+Launchpad-Bugs-Fixed: 1879092
+Changes:
+ glibc (2.31-0ubuntu10) groovy; urgency=medium
+ .
+   * Copy the fully conditionalized x86 variant for math-vector-fortran.h
+     to /usr/include/finclude. On all architectures. LP: #1879092.
+   * Backport x86 CET patches from the trunk.
+   * debian/patches/git-updates.diff: update from upstream stable branch.
+     - [23296] Data race in setting function descriptor during lazy binding
+     - [25639] localedata: Some names of days and months wrongly spelt in Occitan
+     - [25810] x32: Incorrect syscall entries with pointer, off_t and size_t
+     - [25896] Incorrect prctl
+     - [25902] Bad LOADARGS_N
+     - [25966] Incorrect access of __x86_shared_non_temporal_threshold for x32
+     - [25976] nss_compat: internal_end*ent may clobber errno, hiding ERANGE
+Checksums-Sha1:
+ dbc80173e17d432e6ff7c27938574179d7f2c358 3192316 glibc-doc_2.31-0ubuntu10_all.deb
+ bbc2e19fea88d2bbf49e33f99ce8546604043390 18480712 glibc-source_2.31-0ubuntu10_all.deb
+ e57ace972912ea180aa870b1b05944cd881fc046 13633 glibc_2.31-0ubuntu10_amd64.buildinfo
+ 1e0ae2d1e29a8eb68a0333926ae6a1236b15f97a 2824168 libc-bin-dbgsym_2.31-0ubuntu10_amd64.ddeb
+ ee378f26c13dcd4a6fc53e7d117e388cfb764b90 862508 libc-bin_2.31-0ubuntu10_amd64.deb
+ 56ae267fd2d5a0135fe0e9d046f5f4ea9de0a112 161160 libc-dev-bin-dbgsym_2.31-0ubuntu10_amd64.ddeb
+ b230dd58fdc81be766d4387d2cb4f15f37b8b2a0 298628 libc-dev-bin_2.31-0ubuntu10_amd64.deb
+ 4444fd5cd298925f588de3e774cc3bca4aea5aad 5903056 libc6-dbg_2.31-0ubuntu10_amd64.deb
+ 4a7cd47e43a7231ba56d158cb7f1561221ac5393 2130408 libc6-dev-i386_2.31-0ubuntu10_amd64.deb
+ 800ac2ea89ed0cd1bacc534d7457c5e4e590d2ac 2217176 libc6-dev-x32_2.31-0ubuntu10_amd64.deb
+ 86a066caeb88feabe9773e03ec70bb8bbdc805b5 2745984 libc6-dev_2.31-0ubuntu10_amd64.deb
+ a9b7444558b40e798a7c4c0d539610862d64d5b4 9863748 libc6-i386-dbgsym_2.31-0ubuntu10_amd64.ddeb
+ 77a962aa088331a915405ce8aea4e2761084ac00 2947100 libc6-i386_2.31-0ubuntu10_amd64.deb
+ 87159ebbb30bc40c7d73d445a794c6da2aeab8c9 1797908 libc6-pic_2.31-0ubuntu10_amd64.deb
+ 9381ca206299d183ad495cb83ee3bf522d5427de 1348012 libc6-udeb_2.31-0ubuntu10_amd64.udeb
+ 356e02a32d2e433837c97c5a98a1c3f17fad06cf 10462180 libc6-x32-dbgsym_2.31-0ubuntu10_amd64.ddeb
+ cd769211001ef2358da313718d534824118c0b34 3015400 libc6-x32_2.31-0ubuntu10_amd64.deb
+ 07af56f9311e2638a0e42eff14801a4c38a26a18 2941032 libc6_2.31-0ubuntu10_amd64.deb
+ d11b3b8334b9e8c1cff3340dceecab219e9da933 10803820 locales-all_2.31-0ubuntu10_amd64.deb
+ a7ceb5efbb1f0270295daf1bce195fc7cce56216 4086004 locales_2.31-0ubuntu10_all.deb
+ c94081e80cd3cee54dc55ce775e3e069e675433d 329600 nscd-dbgsym_2.31-0ubuntu10_amd64.ddeb
+ 5f2f9ccbb13771b27935513a14d3792fb8f5105e 302412 nscd_2.31-0ubuntu10_amd64.deb
+Checksums-Sha256:
+ b4b586db4ace7052c6efd5635945dfaa1db8fb3f9514955ee34b8e802ee5b483 3192316 glibc-doc_2.31-0ubuntu10_all.deb
+ 6f81a6e8197e80f5c46cf88f939548c9c0646743d22ab9ce39a11c0f26be3e66 18480712 glibc-source_2.31-0ubuntu10_all.deb
+ e1b67c362ab3a243a2a535509b86c7adda2fbbdcb5daceb7662d2129cc3a4d57 13633 glibc_2.31-0ubuntu10_amd64.buildinfo
+ fe6996b4ea77b3491563275f97ad974caa0d2d441defe57e66b206976bee631a 2824168 libc-bin-dbgsym_2.31-0ubuntu10_amd64.ddeb
+ b58f6b45bdbdb0534603eee8677c702e73409146dfd726e9f8b272339d7f78b0 862508 libc-bin_2.31-0ubuntu10_amd64.deb
+ f2f1b42407c87806a9c2a61fc9cf7de0ebbe5ce47ba18d5d858d37b607f19b2e 161160 libc-dev-bin-dbgsym_2.31-0ubuntu10_amd64.ddeb
+ 7cc3945a367af7229b916307f116c5e6eef81ffa551de095dc5ad9a4da2db2b5 298628 libc-dev-bin_2.31-0ubuntu10_amd64.deb
+ 52bce4169644fd81de9e6a0de17a03a6632b154b75c9cfebf3e7dba77cefe4da 5903056 libc6-dbg_2.31-0ubuntu10_amd64.deb
+ 2e9db8b58a7d01173d31d0677c00eab522fdb02fa141d51f396a99cb58aea91c 2130408 libc6-dev-i386_2.31-0ubuntu10_amd64.deb
+ c98c7a54ed4f1400b6eec1cf41373c0b0e29143a30a8b5350327c29ec262f669 2217176 libc6-dev-x32_2.31-0ubuntu10_amd64.deb
+ 861b18a37aaa3b27ba5569cfdd23b82798f8024a92aedd5e1ac05d58b8e8dbd9 2745984 libc6-dev_2.31-0ubuntu10_amd64.deb
+ 9529212a200afbe232c1d53aca7ae50026e51658b55101572c8bf4fa781a569b 9863748 libc6-i386-dbgsym_2.31-0ubuntu10_amd64.ddeb
+ fbb405f092200e0523b3df44821314454cffe6c5e6ea06fe3efae86987de4ad8 2947100 libc6-i386_2.31-0ubuntu10_amd64.deb
+ a8a40fa33b148f60aa7b35859060144a8b735b48bbd3fdba2f8f0c6ccbaa5410 1797908 libc6-pic_2.31-0ubuntu10_amd64.deb
+ f89490304a9e88a67ab3c0cce195c279ea27b789e3b356df90e299595bd142ae 1348012 libc6-udeb_2.31-0ubuntu10_amd64.udeb
+ bda852de27fcb274f562791098f1919b8d5ad12c16a536379332cabc2075e0f5 10462180 libc6-x32-dbgsym_2.31-0ubuntu10_amd64.ddeb
+ 946882a5a97db0001c9e3e53c1e5ac9a3041bfe7a6c51578851794c0f003c4d7 3015400 libc6-x32_2.31-0ubuntu10_amd64.deb
+ 484b1908c350a26c6b321f68f04645296d369d3149dbc1186f9bf3cf258fb9db 2941032 libc6_2.31-0ubuntu10_amd64.deb
+ 5fe52abd3458a11a10660f8a05c2ac7ab562d50fa6aed12c535ad0e1701220d0 10803820 locales-all_2.31-0ubuntu10_amd64.deb
+ 445f818a1aa5d613deba48ab35beb65004c919d61a79ee4abe4957d8fed61c5a 4086004 locales_2.31-0ubuntu10_all.deb
+ e96724f8dffeb15aa62163881bcb03629b5797f35c41d371336675f928623c8d 329600 nscd-dbgsym_2.31-0ubuntu10_amd64.ddeb
+ 8182202816a3fd93f0bf02056b5c20542b1ce66c76b9951142659630020ac5f0 302412 nscd_2.31-0ubuntu10_amd64.deb
+Files:
+ 1656f7b01360f8d67a52a8d7c920e932 3192316 doc optional glibc-doc_2.31-0ubuntu10_all.deb
+ 9258f6db7004ec0cede10689877228b0 18480712 devel optional glibc-source_2.31-0ubuntu10_all.deb
+ fbc1df1a6bfa7d041d9ab6fb2aae3944 13633 libs required glibc_2.31-0ubuntu10_amd64.buildinfo
+ 1b9e8b21cd53b33589a35c234bad512f 2824168 debug optional libc-bin-dbgsym_2.31-0ubuntu10_amd64.ddeb
+ 8e7b5f25cfe3863a29b0879b3998edd5 862508 libs required libc-bin_2.31-0ubuntu10_amd64.deb
+ 5477b4681a30ef5c9f21abfb20213244 161160 debug optional libc-dev-bin-dbgsym_2.31-0ubuntu10_amd64.ddeb
+ 7ca9e1a484f816758c62ca438e150066 298628 libdevel optional libc-dev-bin_2.31-0ubuntu10_amd64.deb
+ 30d07bd3ab2cdaa7ba11302477652a11 5903056 debug optional libc6-dbg_2.31-0ubuntu10_amd64.deb
+ 880482146389f6ee233ab08eb294cfb5 2130408 libdevel optional libc6-dev-i386_2.31-0ubuntu10_amd64.deb
+ 148e7c31bb333d0ba0b973fb84633394 2217176 libdevel optional libc6-dev-x32_2.31-0ubuntu10_amd64.deb
+ d9d61548e3615c7a445432f8e4644f4a 2745984 libdevel optional libc6-dev_2.31-0ubuntu10_amd64.deb
+ f9f1b956626e64726c03aa460f9eb20d 9863748 debug optional libc6-i386-dbgsym_2.31-0ubuntu10_amd64.ddeb
+ c0b5fcbe249add8726a27574172dde92 2947100 libs optional libc6-i386_2.31-0ubuntu10_amd64.deb
+ 9e598d1364e527034a96190cd3496536 1797908 libdevel optional libc6-pic_2.31-0ubuntu10_amd64.deb
+ 6b7e9071b17f9a63a6ad4a8772a2e564 1348012 debian-installer optional libc6-udeb_2.31-0ubuntu10_amd64.udeb
+ fbe642cd96ab269f20971b4bb5317013 10462180 debug optional libc6-x32-dbgsym_2.31-0ubuntu10_amd64.ddeb
+ 2f2001b3057ebe0c59e72f2a761aee50 3015400 libs optional libc6-x32_2.31-0ubuntu10_amd64.deb
+ 8f41b6e9be7653fd391aa5c6693381e9 2941032 libs optional libc6_2.31-0ubuntu10_amd64.deb
+ 5f0249dbef86873bfef7ac2113cab064 10803820 localization optional locales-all_2.31-0ubuntu10_amd64.deb
+ b907d8fbe3ce81c3a212b1dd954365f8 4086004 localization standard locales_2.31-0ubuntu10_all.deb
+ 31d28f480bd08f0dd1e42f3fd97500d3 329600 debug optional nscd-dbgsym_2.31-0ubuntu10_amd64.ddeb
+ 276c2de8a207ffb9819e47698619a082 302412 admin optional nscd_2.31-0ubuntu10_amd64.deb
+Original-Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
