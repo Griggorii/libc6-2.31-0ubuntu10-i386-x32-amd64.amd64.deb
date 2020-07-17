@@ -21,4 +21,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 Запрещается выдача в других дистрибутивах без указания автора компилита даже 
-если вы распаковали data.tar.xz и орудуете им в арче подобных
+если вы распаковали data.tar.xz и орудуете им в арче подобных.
+
+Полный пак включает в себя glibc-doc glibc-source libc-bin libc-dev-bin libc6 
+libc6-dbg libc6-dev libc6-dev-i386 libc6-dev-x32 libc6-i386 libc6-pic libc6-udeb 
+libc6-x32 locales locales-all nscd которые просто не влезут при бесплатном тарифе 
